@@ -9,6 +9,5 @@ def read_commands(filename):
         parsed_command = Parser.parse_command(command)
         if parsed_command:
             Request.handle_request(parsed_command)
-        print parsed_command
         command = file_fp.readline()
     file_fp.close()

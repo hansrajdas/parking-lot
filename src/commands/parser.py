@@ -11,14 +11,16 @@ SUPPORTED_COMMANDS = {
 class Parser:
     """Parses parking lot commands."""
 
-    def parse_command(self, command):
+    @classmethod
+    def parse_command(cls, command):
         """Parses given command."""
         if not command:
             print '[Error]: Empty command received'
             return False
-        return self.validate_command(command.strip().split(' '))
+        return cls.validate_command(command.strip().split(' '))
 
-    def validate_command(self, command):
+    @classmethod
+    def validate_command(cls, command):
         """Validates if command is valid or not."""
         if command[0] not in SUPPORTED_COMMANDS:
             print '[Error]: Command not supported - %s' % command[0]
