@@ -15,7 +15,10 @@ def main():
         sys.exit(1)
 
     # Launch application
-    interface.parse_and_process_requests(sys.argv[1])
+    try:
+        interface.parse_and_process_requests(sys.argv[1])
+    except IOError, msg:
+        print msg
 
 
 if __name__ == '__main__':
