@@ -16,7 +16,7 @@ def main():
 
     # Launch application
     try:
-        interface.parse_and_process_requests(sys.argv[1])
+        interface.read_commands(sys.argv[1])
     except IOError, msg:
         print msg
 
