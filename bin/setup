@@ -7,3 +7,5 @@
 # should Just Work.
 
 export PYTHONPATH="${PYTHONPATH}:$PWD/src"
+
+rm -f `find . -name *.pyc`

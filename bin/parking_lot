@@ -3,4 +3,11 @@
 # run, bin/parking_lot can be used to launch
 # it.
 
-python src/main.py $1
+if [ "$#" -eq 0 ];
+then
+    python src/main.py
+    echo "Without args"
+else
+    python src/main.py $1
+    echo "With args"
+fi
