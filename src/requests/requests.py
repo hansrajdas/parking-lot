@@ -11,7 +11,12 @@ class Request:
     def handle_request(cls, command):
         command_name = command[0]
         if command_name == 'create_parking_lot':
-            parking_lot = ParkingLot(int(command[1]))
+            Request.parking_lot = ParkingLot(int(command[1]))
+        elif command_name == 'exit':
+            utils.exit_app(0)
+        elif not Request.parking_lot:
+            utils.console_log(
+                '[Error]: Please create parking lot before any operation')
         elif command_name == 'park':
             pass
         elif command_name == 'leave':
@@ -24,7 +29,5 @@ class Request:
             pass
         elif command_name == 'slot_number_for_registration_number':
             pass
-        elif command_name == 'exit':
-            utils.exit_app(0)
         else:
             utils.console_log('[Error]: Unknown command - %s' % command_name)
