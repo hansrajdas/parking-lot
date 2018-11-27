@@ -31,7 +31,7 @@ class ParserAndValidateCommand:
             return False
         elif SUPPORTED_COMMANDS[command[0]] != len(command) - 1:
             utils.console_log(
-                '[Error]: Invalid number of arguments for command: %s' % (
+                '[Error]: Invalid number of arguments for command - %s' % (
                     command[0]))
             return False
         return command

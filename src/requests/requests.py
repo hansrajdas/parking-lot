@@ -9,7 +9,6 @@ class Request:
 
     @classmethod
     def handle_request(cls, command):
-        utils.console_log(command)
         command_name = command[0]
         if command_name == 'create_parking_lot':
             parking_lot = ParkingLot(int(command[1]))
@@ -28,4 +27,4 @@ class Request:
         elif command_name == 'exit':
             utils.exit_app(0)
         else:
-            utils.console_log('Unknown command: %s' % command_name)
+            utils.console_log('[Error]: Unknown command - %s' % command_name)
