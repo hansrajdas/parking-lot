@@ -2,23 +2,21 @@
 
 import interface
 import sys
-
-def usage(argument_list):
-    print 'Invalid arguments received!'
-    print 'Usage: bin/parking_lot <commands_file.txt>'
+import utils
 
 
 def main():
     """Starting point of parking lot application."""
-    if len(sys.argv) != 2:
+    if len(sys.argv) == 2:
+        try:
+            interface.read_commands_from_file(sys.argv[1])
+        except IOError, msg:
+            utils.console_log(msg)
+    elif len(sys.argv) == 1:
+        interface.launch_interactive_mode()
+    else:
         usage(sys.argv)
-        sys.exit(1)
-
-    # Launch application
-    try:
-        interface.read_commands(sys.argv[1])
-    except IOError, msg:
-        print msg
+        utils.exit_app(1)
 
 
 if __name__ == '__main__':
