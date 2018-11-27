@@ -18,7 +18,7 @@ class Request:
             utils.console_log(
                 '[Error]: Please create parking lot before any operation')
         elif command_name == 'park':
-            pass
+            Request.parking_lot.park_vehicle(command[1], command[2])
         elif command_name == 'leave':
             pass
         elif command_name == 'status':

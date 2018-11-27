@@ -10,6 +10,6 @@ class ParkingSpot:
         """Returns the details of vehicle parked at this spot."""
         return self.vehicle
 
-    def park_vehicle(self, vehicle):
+    def set_spot(self, vehicle):
         """Parks a vehicle at this spot."""
         self.vehicle = vehicle
