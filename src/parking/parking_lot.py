@@ -24,3 +24,26 @@ class ParkingLot:
         self.vehicles[spot.spot_num] = Vehicle(registration_number, color)
         self.free_slots -= 1
         utils.console_log('Allocated slot number: %d' % spot.spot_num)
+
+    def free_parking_spot(self, spot_num):
+        """Frees a given parking spot."""
+        pass
+
+    def get_parking_status(self):
+        """Prints detail of all vehicles present in parking lot."""
+        pass
+
+    def get_registration_numbers_with_color(self, color):
+        """Prints list of registration numbers with given vehicle color."""
+        pass
+
+    def get_slot_numbers_with_color(self, color):
+        """Prints list of slot numbers with given vehicle color."""
+        pass
+
+    def get_slot_num_with_vehicle_reg_num(self, registration_num):
+        """
+        Prints slot number where vehicle with given registration number is
+        parked.
+        """
+        pass

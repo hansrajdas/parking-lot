@@ -20,14 +20,14 @@ class Request:
         elif command_name == 'park':
             Request.parking_lot.park_vehicle(command[1], command[2])
         elif command_name == 'leave':
-            pass
+            Request.parking_lot.free_parking_spot(command[1])
         elif command_name == 'status':
-            pass
+            Request.parking_lot.get_parking_status()
         elif command_name == 'registration_numbers_for_cars_with_colour':
-            pass
+            Request.parking_lot.get_registration_numbers_with_color(command[1])
         elif command_name == 'slot_numbers_for_cars_with_colour':
-            pass
+            Request.parking_lot.get_slot_numbers_with_color(command[1])
         elif command_name == 'slot_number_for_registration_number':
-            pass
+            Request.parking_lot.get_slot_num_with_vehicle_reg_num(command[1])
         else:
             utils.console_log('[Error]: Unknown command - %s' % command_name)
