@@ -10,6 +10,7 @@ class Request:
 
     @classmethod
     def handle_request(cls, command):
+        """Handles command request and invokes required parking lot method."""
         command_name = command[0]
         if command_name == 'create_parking_lot':
             Request.parking_lot = ParkingLot(int(command[1]))

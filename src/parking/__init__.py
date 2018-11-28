@@ -1,1 +1,1 @@
-# Package file
+"""Parking package file."""

@@ -1,5 +1,7 @@
 import utils
 
+# Map of all supported commands and number of arguments required for that
+# command.
 SUPPORTED_COMMANDS = {
     'create_parking_lot': 1,
     'park': 2,

@@ -1,1 +1,1 @@
-# This is a package file.
+"""Requests package file."""

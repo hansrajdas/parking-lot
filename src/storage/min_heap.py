@@ -2,6 +2,11 @@ from parking.parking_spot import ParkingSpot
 
 
 class MinHeap:
+    """
+    Implements all methods required to manage a min heap. Min heap property is
+    maintained on the basis of parking spot id. Extract min method of this
+    class will always return the parking spot having minimum spot number.
+    """
     def __init__(self, n):
         self.slots = [ParkingSpot(i + 1) for i in range(n)]
 
@@ -34,6 +39,7 @@ class MinHeap:
 
     def extract_min(self, n):
         """Extracts and returns min parking slot number from free slots."""
+        # Swap first and last objects.
         self.slots[0], self.slots[n - 1] = self.slots[n - 1], self.slots[0]
         self.min_heapify(n - 1, 0)
         return self.slots[n - 1]

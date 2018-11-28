@@ -16,6 +16,7 @@ def read_commands_from_file(filename):
 
 def launch_interactive_mode():
     """Keeps on reading commands from console until exit command."""
+    # In interactive mode, run until 'exit' command is entered.
     while True:
         command = raw_input().strip()
         parse_and_process_command(command)
