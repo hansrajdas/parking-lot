@@ -6,6 +6,13 @@
 # After this is run, bin/parking_lot
 # should Just Work.
 
+# Install all dependencies.
+pip install -r requirements.txt
+
+# Export python path to src directory.
 export PYTHONPATH="${PYTHONPATH}:$PWD/src"
 
+# Remove all python compiled files.
 rm -f `find . -name *.pyc`
+
+# Run test suit
