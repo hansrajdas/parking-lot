@@ -20,7 +20,7 @@ class Request:
         elif command_name == 'park':
             Request.parking_lot.park_vehicle(command[1], command[2])
         elif command_name == 'leave':
-            Request.parking_lot.free_parking_spot(command[1])
+            Request.parking_lot.free_parking_spot(int(command[1]))
         elif command_name == 'status':
             Request.parking_lot.get_parking_status()
         elif command_name == 'registration_numbers_for_cars_with_colour':

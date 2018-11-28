@@ -1,10 +1,10 @@
 class ParkingSpot:
-    def __init__(self, spot_num):
-        self.spot_num = spot_num
+    def __init__(self, spot_id):
+        self.id = spot_id
         self.vehicle = None
 
     def get_spot_num(self):
-        return self.spot_num
+        return self.id
 
     def get_vehicle_parked(self):
         """Returns the details of vehicle parked at this spot."""

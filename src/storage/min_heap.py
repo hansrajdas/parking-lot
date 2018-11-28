@@ -24,3 +24,8 @@ class MinHeap:
         self.slots[0], self.slots[n - 1] = self.slots[n - 1], self.slots[0]
         self.min_heapify(n - 1, 0)
         return self.slots[n - 1]
+
+    def add_to_heap(self, n, spot_num):
+        self.slots[n].id = spot_num
+        self.slots[0], self.slots[n] = self.slots[n], self.slots[0]
+        self.min_heapify(n + 1, 0)
