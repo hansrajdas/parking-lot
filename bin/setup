@@ -10,9 +10,10 @@
 pip install -r requirements.txt
 
 # Export python path to src directory.
-export PYTHONPATH="${PYTHONPATH}:$PWD/src"
+export PYTHONPATH="$PYTHONPATH:$PWD/src"
 
 # Remove all python compiled files.
 rm -f `find . -name *.pyc`
 
 # Run test suit
+python -m unittest discover -s src/ -p '*_test.py'

@@ -23,6 +23,7 @@ class ParkingLot:
         self.slots.add_to_heap(self.free_slots, spot_num)
 
     def park_vehicle(self, registration_number, color):
+        """Parks vehicle with given registration number and color."""
         if not self.free_slots:
             utils.console_log('Sorry, parking lot is full')
             return None
