@@ -1,5 +1,6 @@
 from parking.parking_spot import ParkingSpot
 
+
 class MinHeap:
     def __init__(self, n):
         self.slots = [ParkingSpot(i + 1) for i in range(n)]

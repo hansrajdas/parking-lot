@@ -11,6 +11,7 @@ SUPPORTED_COMMANDS = {
     'exit': 0,
 }
 
+
 class ParserAndValidateCommand:
     """Parses parking lot commands."""
 

@@ -2,6 +2,7 @@ import utils
 
 from parking.parking_lot import ParkingLot
 
+
 class Request:
     """Handles parking lot commands."""
 

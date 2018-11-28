@@ -4,6 +4,7 @@ from parking.parking_spot import ParkingSpot
 from parking.vehicle import Vehicle
 from storage.min_heap import MinHeap
 
+
 class ParkingLot:
     """Manages parking lot."""
     def __init__(self, number_of_slots):
