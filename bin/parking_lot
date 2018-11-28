@@ -3,6 +3,8 @@
 # run, bin/parking_lot can be used to launch
 # it.
 
+# If filename is passed, pass that filename to application otherwise run
+# application in interactive mode.
 if [ "$#" -eq 0 ];
 then
     python src/main.py
