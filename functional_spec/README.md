@@ -1,47 +1,31 @@
 # Functional Suite
 
-`functional_spec/` contains the Rspec/Aruba based automated testing suite that will validate the correctness of your program for the sample input and output.
-
-Please to add specs as needed when building your solution.
-
-We do not support Windows at this point in time. If you don't have access to an OSX or Linux machine, we recommend  setting up a Linux machine you can develop against using something like [VirtualBox](https://www.virtualbox.org/) or [Docker](https://docs.docker.com/docker-for-windows/#test-your-installation).
-
-This needs [Ruby to be installed](https://www.ruby-lang.org/en/documentation/installation/), followed by some libraries. The steps are listed below.
+`functional_spec/` contains the unittest based automated testing suite  to verify correctness of program for the sample input and output.
 
 ## Setup
 
-First, install [Ruby](https://www.ruby-lang.org/en/documentation/installation/). Then run the following commands under the `functional_spec` dir.
+First, install [Python](https://www.python.org/downloads/). Then run the following commands under the `functional_spec` dir.
 
 ```
-functional_spec $ ruby -v # confirm Ruby present
-ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin17]
-functional_spec $ gem install bundler # install bundler to manage dependencies
-Successfully installed bundler-1.16.1
-Parsing documentation for bundler-1.16.1
-Done installing documentation for bundler after 2 seconds
-1 gem installed
-functional_spec $ bundle install # install dependencies
-...
-...
-Bundle complete! 4 Gemfile dependencies, 23 gems now installed.
-Use `bundle info [gemname]` to see where a bundled gem is installed.
-functional_spec $ 
+functional_spec$ python -V  # Confirm Python is installed
+Python 2.7.15rc1
 
+functional_spec$ pip install mock  # Install mock python package
+Collecting mock
+  Using cached https://files.pythonhosted.org/packages/e6/35/f187bdf23be87092bd0f1200d43d23076cee4d0dec109f195173fd3ebc79/mock-2.0.0-py2.py3-none-any.whl
+Collecting funcsigs>=1; python_version < "3.3" (from mock)
+  Using cached https://files.pythonhosted.org/packages/69/cb/f5be453359271714c01b9bd06126eaf2e368f1fddfff30818754b5ac2328/funcsigs-1.0.2-py2.py3-none-any.whl
+Collecting six>=1.9 (from mock)
+  Using cached https://files.pythonhosted.org/packages/67/4b/141a581104b1f6397bfa78ac9d43d8ad29a7ca43ea90a2d863fe3056e86a/six-1.11.0-py2.py3-none-any.whl
+Collecting pbr>=0.11 (from mock)
+  Using cached https://files.pythonhosted.org/packages/f3/04/fddc1c2dd75b256eda4d360024692231a2c19a0c61ad7f4a162407c1ab58/pbr-5.1.1-py2.py3-none-any.whl
+Installing collected packages: funcsigs, six, pbr, mock
+Successfully installed funcsigs-1.0.2 mock-2.0.0 pbr-5.1.1 six-1.11.0
 ```
 
 ## Usage
 
-You can run the full suite from `parking_lot` by doing
+Run the full test suite from `parking_lot` by doing
 ```
-parking_lot $ bin/run_functional_specs
-```
-
-You can run the full suite directly from `parking_lot/functional_spec` by doing
-```
-parking_lot/functional_spec $ bundle exec rake spec:functional
-```
-
-You can run a specific test from `parking_lot/functional_spec` by providing the spec file and line number. In this example we're running the `can create a parking lot` test.
-```
-parking_lot/functional_spec $ PATH=$PATH:../bin bundle exec rspec spec/parking_lot_spec.rb:5
+parking_lot$ bin/run_functional_specs
 ```
