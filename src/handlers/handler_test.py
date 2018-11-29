@@ -1,7 +1,12 @@
 """Contains unit test cases for handler module."""
 
 import mock
+import os
+import sys
 import unittest
+
+sys.path.append(os.path.abspath(__file__ + "/../.."))
+
 import utils
 
 from handlers.handler import Handler
