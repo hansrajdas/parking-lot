@@ -21,7 +21,6 @@ class ParserAndValidateCommand:
     def parse_command(cls, command):
         """Parses given command."""
         if not command:
-            utils.console_log('[Error]: Empty command received')
             return False
         return cls.validate_command(command.strip().split(' '))
 
@@ -29,12 +28,9 @@ class ParserAndValidateCommand:
     def validate_command(cls, command):
         """Validates if command is valid or not."""
         if command[0] not in SUPPORTED_COMMANDS:
-            utils.console_log(
-                '[Error]: Command not supported - %s' % command[0])
+            utils.console_log('%s: command not found' % command[0])
             return False
         elif SUPPORTED_COMMANDS[command[0]] != len(command) - 1:
-            utils.console_log(
-                '[Error]: Invalid number of arguments for command - %s' % (
-                    command[0]))
+            utils.console_log('%s: invalid number of arguments' % (command[0]))
             return False
         return command

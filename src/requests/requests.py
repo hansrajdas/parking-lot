@@ -18,7 +18,7 @@ class Request:
             utils.exit_app(0)
         elif not Request.parking_lot:
             utils.console_log(
-                '[Error]: Please create parking lot before any operation')
+                'please create parking lot before this operation')
         elif command_name == 'park':
             Request.parking_lot.park_vehicle(command[1], command[2])
         elif command_name == 'leave':
@@ -32,4 +32,4 @@ class Request:
         elif command_name == 'slot_number_for_registration_number':
             Request.parking_lot.get_slot_num_with_vehicle_reg_num(command[1])
         else:
-            utils.console_log('[Error]: Unknown command - %s' % command_name)
+            utils.console_log('%s: command not found' % command_name)

@@ -7,6 +7,10 @@ def console_log(message):
     print(message)
 
 
+def show_parking_lot_prompt():
+    print('user@parking-lot$'),
+
+
 def exit_app(status):
     sys.exit(status)
 

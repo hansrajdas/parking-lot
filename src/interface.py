@@ -18,6 +18,7 @@ def launch_interactive_mode():
     """Keeps on reading commands from console until exit command."""
     # In interactive mode, run until 'exit' command is entered.
     while True:
+        utils.show_parking_lot_prompt()
         command = raw_input().strip()
         parse_and_process_command(command)
 
