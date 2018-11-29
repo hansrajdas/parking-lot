@@ -1,7 +1,7 @@
 import utils
 
 from commands.parser import ParserAndValidateCommand
-from requests.requests import Request
+from handlers.handler import Handler
 
 
 def read_commands_from_file(filename):
@@ -27,4 +27,4 @@ def parse_and_process_command(command):
     """Parses raw command and if command is valid, executes it."""
     parsed_command = ParserAndValidateCommand.parse_command(command)
     if parsed_command:
-        Request.handle_request(parsed_command)
+        Handler.handle_request(parsed_command)
