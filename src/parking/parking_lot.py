@@ -10,7 +10,17 @@ class ParkingLot:
     def __init__(self, number_of_slots):
         self.free_slots = number_of_slots
         self.slots = MinHeap(number_of_slots)
-        self.vehicles = {}  # Maps parking spot to vehicle
+        # This map holds all vehicles parked in the parking lot. It maps
+        # parking spot number to a vehicle object.
+        # Reason to have map here instead of other data structures like list or
+        # linked list is with the assumption that this application will be used
+        # mostly with park or leave commands and map is the only data structure
+        # which has fastest delete and add operation - O(1).
+        # This has over heads also like map is not sorted and while printing
+        # status we has to print table in sorted order with respect to parking
+        # spot numbers. So overall there is a trade off when using map or other
+        # data structure to store parked vehicles.
+        self.vehicles = {}
         utils.console_log(
             'Created a parking lot with %d slots' % number_of_slots)
 
