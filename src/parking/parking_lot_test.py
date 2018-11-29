@@ -1,7 +1,8 @@
 """Contains unit test cases for parking_lot module."""
 
-import sys
+import mock
 import os
+import sys
 import unittest
 
 sys.path.append(os.path.abspath(__file__ + "/../.."))
@@ -9,7 +10,6 @@ sys.path.append(os.path.abspath(__file__ + "/../.."))
 import utils
 
 from parking.parking_lot import ParkingLot
-import mock
 
 
 class ParkingLotTest(unittest.TestCase):
