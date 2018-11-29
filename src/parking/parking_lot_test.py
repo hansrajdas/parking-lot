@@ -15,11 +15,6 @@ import mock
 class ParkingLotTest(unittest.TestCase):
     """Unit tests for parking lot module."""
 
-    def setUp(self):
-        """Initialises all test cases."""
-        # self.parking_lot = ParkingLot(5)
-        pass
-
     @mock.patch.object(utils, 'console_log')
     def test_park_vehicle(self, mocked_log_fn):
         """Verify that first free parking spot is given to new vehicle."""
